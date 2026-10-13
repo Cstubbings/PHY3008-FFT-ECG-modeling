@@ -11,40 +11,19 @@ from scipy.signal import butter, filtfilt, find_peaks
 #------------------------------------------------------
 #SETTINGS 
 #------------------------------------------------------
-input_folder = r"File path" 
-output_folder = r"File path"]
-
-fs = 360
-
-os.makedirs(output_folder, exists_ok = true) 
-
-
-import os
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-import wfdb
-from scipy.fft import fft, fftfreq
-from scipy.signal import butter, filtfilt, find_peaks
-
-
-
-#------------------------------------------------------
-#SETTINGS 
-#------------------------------------------------------
 input_folder = r"C:\Users\conno\OneDrive - Queen's University Belfast\Level 3\PHY 3008\mit-bih-noise-stress-test-database-1.0.0" 
 output_folder = r"C:\Users\conno\OneDrive - Queen's University Belfast\Level 3\PHY 3008\FFT-Output"
 
 
 fs = 360
 
-os.makedirs(output_folder, exists_ok = True) 
+os.makedirs(output_folder, exist_ok = True) 
 
 
 #-----------------------------------------------------
 #FILTER FUNCION
 #-----------------------------------------------------
-def bandpass_filtering(signal, fs,
+def bandpass_filter(signal, fs,
                        lowcut = 0.5,
                        highcut = 40,
                        order = 4):
@@ -67,7 +46,7 @@ def process_record(dat_file):
     record_path = os.path.splitext(dat_file)[0]
     record_name = os.path.basename(record_path)
     
-    print(f"processing{record_name}")
+    print(f"Processing {record_name}...")
     
     try:
         record = wfdb.rdrecord(record_path)
@@ -109,7 +88,7 @@ def process_record(dat_file):
         #---------------------------------------------
         signal_zero_mean = ecg_raw - np.mean(ecg_raw)
         
-        fft_values = fft(signal_zer_mean)
+        fft_values = fft(signal_zero_mean)
         
         freqs = fftfreq(
             len(signal_zero_mean),
@@ -201,15 +180,3 @@ print("All records compleated.")
         
         
         
-
-
-
-
-
-
-
-
-
-
-  
-  
