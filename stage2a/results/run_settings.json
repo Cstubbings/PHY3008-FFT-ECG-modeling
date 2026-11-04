@@ -1,0 +1,37 @@
+{
+  "database_folder": "C:\\Users\\david\\Documents\\professionalSkills\\mit-bih-arrhythmia-database-1.0.0\\mit-bih-arrhythmia-database-1.0.0",
+  "record_count": 48,
+  "matching_tolerance_ms": 150.0,
+  "base_height_mv": 0.4,
+  "base_distance_samples": 3,
+  "tuned_distance_ms": 200.0,
+  "tuned_prominence": 0.5,
+  "development_records": [
+    "100",
+    "105",
+    "200",
+    "203"
+  ],
+  "prominence_values_tested": [
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.8,
+    1.0
+  ],
+  "timing_error_definition": "mean absolute detection minus annotation",
+  "lead_rule": "MLII where available; otherwise first recorded channel",
+  "baseline_source_repository": "https://github.com/Cstubbings/PHY3008-FFT-ECG-modeling.git",
+  "baseline_source_commit": "a99ba65",
+  "baseline_source_file": "FFT_Benchmark.py, lines 75-79",
+  "python_version": "3.12.14",
+  "package_versions": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "scipy": "1.18.1",
+    "wfdb": "4.3.1"
+  }
+}
