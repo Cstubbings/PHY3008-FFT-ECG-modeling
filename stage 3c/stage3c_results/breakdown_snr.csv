@@ -1,0 +1,13 @@
+noise,method,input,breakdown_snr_db,status,n_records
+bw,BASE,clean,,Above 24 dB (not reached),4
+bw,BASE,raw,,Above 24 dB (not reached),4
+bw,PT,clean,,Below or at -6 dB (not observed),4
+bw,PT,raw,,Below or at -6 dB (not observed),4
+em,BASE,clean,,Above 24 dB (not reached),2
+em,BASE,raw,,Above 24 dB (not reached),2
+em,PT,clean,-1.017817645613178,Interpolated,2
+em,PT,raw,-0.9531920107829999,Interpolated,2
+ma,BASE,clean,,Above 24 dB (not reached),4
+ma,BASE,raw,,Above 24 dB (not reached),4
+ma,PT,clean,-0.8781497081208931,Interpolated,4
+ma,PT,raw,-0.818033111926245,Interpolated,4
